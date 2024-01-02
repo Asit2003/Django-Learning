@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px=0"> 
+    <img src="https://source.unsplash.com/random/1200x400?phone,Contact" class="d-block w-100" alt="...">  
+</div>
+<div class="container mx-4 my-4">
+    <h2 class="text-center">Contact Us</h2>
+    <form class="form-group" action="" method="post">
+        {% csrf_token %}
+        <fieldset>
+          <!-- Name input-->
+          <div class="form-group text-center my-2">
+            <label class=" control-label" for="name">Name</label>
+            <div >
+              <input name="name" type="text" placeholder="Your name" class="form-control text-center">
+            </div>
+          </div>
+  
+          <!-- Email input-->
+          <div class="form-group text-center my-2">
+            <label class=" control-label" for="email">E-mail</label>
+            <div >
+              <input name="email" type="text" placeholder="Your email" class="form-control text-center">
+            </div>
+          </div>
+  
+          <!-- Message body -->
+          <div class="form-group text-center my-2">
+            <label class="control-label" for="message">Message</label>
+            <div class="">
+              <textarea class="form-control text-center" name="desc" placeholder="Please enter your message here..." rows="5"></textarea>
+            </div>
+          </div>
+  
+          <!-- Form actions -->
+          <div class="form-group text-center my-2">
+            <div class="col-md-12 text-right">
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+        </form>
+</div>
+{% endblock body %}
